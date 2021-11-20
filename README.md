@@ -1,2 +1,1 @@
-# CollegeConnect
-Created with CodeSandbox
+## College COnnect Website with Firebase and React
