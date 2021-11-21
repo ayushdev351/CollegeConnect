@@ -51,12 +51,12 @@ const SignUp = styled.div`
   margin-right: 30%;
 
   border-radius: 20px;
-  background-color: #f2cf43;
-  background-image: linear-gradient(315deg, #f2cf43 0%, #19a186 74%); 
+  background-color: #6b0f1a;
+  background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
   text-align: center;
 
   >h2{
-     color : black;
+     color : white;
      padding-bottom: 20px;
      font-size : 35px;
      font-family: cursive;  
@@ -73,18 +73,18 @@ const SignUp = styled.div`
         }
 
         >button{
-          padding: 9px;
+          padding: 6px;
           margin: 15px;
           width: 30%;
           border-radius: 5px;
-          background-color: black;
-          font-size: 15px;
+          background-color: white;
+          font-size: 19px;
           font-weight: bold;
           font-family: cursive;
-          color: white;
+          color: black;
           :hover{
             cursor: pointer;
-            color: blue;
+            color: grey;
           }
         }
 
