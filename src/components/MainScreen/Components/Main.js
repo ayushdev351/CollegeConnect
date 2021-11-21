@@ -28,7 +28,14 @@ function MainBody() {
   return (
     <Main>
       <MainHead>
-        <Card className="mainScreenQuestion" style = {{backgroundColor  : "white", padding: "10px", borderRadius: "5px"}}>
+        <Card
+          className="mainScreenQuestion"
+          style={{
+            backgroundColor: "white",
+            padding: "10px",
+            borderRadius: "5px"
+          }}
+        >
           <CardBody>
             <CardTitle>
               <p className="Username">
@@ -62,13 +69,11 @@ const Main = styled.div`
   flex: 0.7;
   display: flex;
   flex-direction: column;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   height: 90vh;
   padding: 15px;
   text-align: left;
   overflow-y: scroll;
-
 `;
 
 const MainHead = styled.div``;
-

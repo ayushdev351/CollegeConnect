@@ -17,4 +17,12 @@ function Profile() {
 
 export default Profile;
 
-const ProfileStyle = styled.div``;
+const ProfileStyle = styled.div`
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8d8d8;
+  height: 90vh;
+  padding: 15px;
+  text-align: left;
+`;

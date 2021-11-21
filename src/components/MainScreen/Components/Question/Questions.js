@@ -43,6 +43,14 @@ function Questions() {
 
 export default Questions;
 
-const QuestionScreen = styled.div``;
+const QuestionScreen = styled.div`
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8d8d8;
+  height: 90vh;
+  padding: 15px;
+  text-align: left;
+`;
 
 const QuestionForm = styled.div``;

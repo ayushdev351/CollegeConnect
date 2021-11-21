@@ -15,44 +15,44 @@ function LeftSide() {
               paddingBottom: "2px"
             }}
           >
-            Spaces
+            Spaces Tags
           </p>
         </LsideHead>
         <LsideMainContent>
           <i className="fas fa-school"></i>
           <p>Studying</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-user-astronaut"></i>
           <p>Astrophysics</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-paste"></i>
           <p>Exams</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-flag"></i>
           <p>India</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-flask"></i>
           <p>Science</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-laptop"></i>
           <p>Engineering</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-book-reader"></i>
           <p>Books</p>
         </LsideMainContent>
-        <br/>
+        <br />
         <LsideMainContent>
           <i className="fas fa-graduation-cap"></i>
           <p>College</p>
@@ -79,9 +79,10 @@ const LsideHead = styled.div`
   color: white;
   font-weight: bold;
   opacity: 1;
-  background-color: #ec6f6f;
-  
-
+  background-color: #6b0f1a;
+  background-image: linear-gradient(74deg, #6b0f1a 0%, #b91372 74%);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 `;
 
 const LsideMainContent = styled.div`

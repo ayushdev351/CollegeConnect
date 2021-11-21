@@ -56,6 +56,9 @@ const Navbar = styled.div`
   background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
 
   color: white;
+  /* :active{
+    color: black;
+  } */
   font-size: 1.1rem;
   padding: 10px;
   position: fixed;
