@@ -31,7 +31,7 @@ export default MainScreen;
 
 const Body = styled.div`
   display: flex;
-  height: 90vh;
+  height: 92.5vh;
   padding-top: 52px;
   overflow-y: hidden;
 `;
