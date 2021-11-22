@@ -1,1 +1,2 @@
-## College COnnect Website with Firebase and React
+## College Connect Website for Students with Firebase and React
+Coming Soon.....
