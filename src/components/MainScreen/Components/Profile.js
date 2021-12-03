@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import { BigHead } from "@bigheads/core";
 
 import { useUserContext } from "../../../context/userContext";
+import { getRandomOptions } from "./Helpers/BigHead.js";
 
 function Profile() {
   const { user, logoutUser } = useUserContext();
-  //  const photoURL = user.photoURL;
 
   return (
     <ProfileStyle>
       <Card>
-        <h1>Profile</h1>
+        <h1>User Profile</h1>
+        <div style={{ width: "200px" }}>
+          <BigHead {...getRandomOptions()} />
+        </div>
         <p>User Name : {user.displayName}</p>
         <p>User Email : {user.email}</p>
-        <p>Joining Date : {user.metadata.creationTime}</p>
+        <p>First Login : {user.metadata.creationTime}</p>
         <p>Last SignIn : {user.metadata.lastSignInTime}</p>
-        {/* <img src={photoURL} alt="user Profile"></img> */}
       </Card>
     </ProfileStyle>
   );
@@ -31,21 +34,26 @@ const ProfileStyle = styled.div`
   background-color: #d8d8d8;
   height: 90vh;
   padding: 15px;
-  text-align: left;
+  text-align: center;
 `;
 
 const Card = styled.div`
-  text-align: center;
   background-color: white;
   border-radius: 15px;
+  margin-top: 5%;
   width: 500px;
-  height: 300px;
+  height: 450px;
 
   > h1 {
-    padding: 20px;
+    padding: 10px;
     font-weight: bold;
     text-align: center;
     color: #ec6f6f;
+  }
+
+  > div {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   > p {
