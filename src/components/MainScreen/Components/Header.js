@@ -7,7 +7,7 @@ import Wrapper from "./Helpers/Wrapper.js";
 import { useUserContext } from "../../../context/userContext";
 
 function Header() {
-  const { user, logoutUser } = useUserContext();
+  const { logoutUser } = useUserContext();
 
   return (
     <Wrapper>

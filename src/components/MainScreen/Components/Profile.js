@@ -6,7 +6,7 @@ import { useUserContext } from "../../../context/userContext";
 import { getRandomOptions } from "./Helpers/BigHead.js";
 
 function Profile() {
-  const { user, logoutUser } = useUserContext();
+  const { user } = useUserContext();
 
   return (
     <ProfileStyle>
