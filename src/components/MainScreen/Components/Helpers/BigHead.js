@@ -1,15 +1,9 @@
 import {
   theme,
-  eyesMap,
-  eyebrowsMap,
-  mouthsMap,
   hairMap,
-  facialHairMap,
-  clothingMap,
   accessoryMap,
   graphicsMap,
-  hatMap,
-  bodyMap
+  hatMap
 } from "@bigheads/core";
 
 function selectRandomKey(object) {
