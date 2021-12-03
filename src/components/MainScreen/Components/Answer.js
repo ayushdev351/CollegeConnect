@@ -49,18 +49,18 @@ const Ans = styled.div`
 
 const AnsHead = styled.div`
   padding: 5px;
+  border-radius: 10px;
 `;
 const AnsQue = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bolder;
-  padding-bottom: 10px;
+  padding-bottom: 2px;
 `;
 
 const AnsAns = styled.div`
-  /* height: 150px;
-  overflow: hidden; */
   line-height: 1.5;
   padding-bottom: 15px;
+  max-height: 5000px;
 `;
 
 const Break = styled.div`
