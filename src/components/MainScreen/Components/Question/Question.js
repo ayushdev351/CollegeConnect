@@ -2,14 +2,41 @@
 
 import React from "react";
 import styled from "styled-components";
+import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
 function Question(props) {
-  return <QuestionDiv>{props.question}</QuestionDiv>;
+  return (
+    <QuestionStyle>
+      <Card>
+        <CardBody>
+          <CardTitle>
+            <p>
+              {" "}
+              <i className="fas fa-user"></i>
+              <span> {props.userName}</span>
+            </p>
+          </CardTitle>
+          <CardText>
+            <p style={{ paddingTop: "8px" }}>{props.question}</p>
+          </CardText>
+        </CardBody>
+      </Card>
+    </QuestionStyle>
+  );
 }
 
 export default Question;
 
-const QuestionDiv = styled.div`
+const QuestionStyle = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: 7px;
+  margin-top: 7px;
+  border-radius: 10px;
+   
+ }
+
 `;
+
+/* <QuestionDiv>{props.question}</QuestionDiv>; */
