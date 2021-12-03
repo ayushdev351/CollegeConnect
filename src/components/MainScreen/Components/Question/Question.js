@@ -32,11 +32,8 @@ const QuestionStyle = styled.div`
   flex-direction: column;
   background-color: white;
   padding: 7px;
-  margin-top: 7px;
-  border-radius: 10px;
-   
+  margin-bottom: 8px;
+  border-radius: 5px;
  }
 
 `;
-
-/* <QuestionDiv>{props.question}</QuestionDiv>; */
