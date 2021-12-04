@@ -1,42 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import styled from "styled-components";
-import questionsData from "../../data/questionsData.js";
-import Question from "./Question.js";
+
+import { db } from "../../../../firebase/index";
 
 function Questions() {
-  const [input, setInput] = useState("");
+  const [newQuestion, setNewQuestion] = useState("");
+  const [questions, setQuestions] = useState([]);
+  const questionsCollectionRef = collection(db, "questions");
 
-  function InputHandler(event) {
-    setInput(event.target.value);
-  }
+  const createQuestion = async () => {
+    await addDoc(questionsCollectionRef, { que: newQuestion });
+  };
 
-  function SubmitHandler(event) {
-    event.preventDefault();
-
-    const questionData = {
-      question: input
+  useEffect(() => {
+    const getQuestions = async () => {
+      const data = await getDocs(questionsCollectionRef);
+      setQuestions(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    questionsData.push(questionData);
-    setInput("");
-  }
+    getQuestions();
+  });
 
   return (
     <QuestionScreen>
       <QuestionForm>
-        <form onSubmit={SubmitHandler}>
-          <input
-            type="text"
-            placeholder="You can Add your Question or Link here."
-            value={input}
-            onChange={InputHandler}
-          ></input>
-          <button type="submit">Add</button>
-        </form>
+        <input
+          placeholder="Add your Question or Link here."
+          onChange={(event) => {
+            setNewQuestion(event.target.value);
+          }}
+        />
+        <button onClick={createQuestion}> Add Que </button>
       </QuestionForm>
-      {questionsData.map((questionData) => (
-        <Question id={questionData.id} question={questionData.question} />
-      ))}
+
+      {questions.map((question) => {
+        return <h1>{question.que}</h1>;
+      })}
     </QuestionScreen>
   );
 }
@@ -56,32 +56,28 @@ const QuestionScreen = styled.div`
 
 const QuestionForm = styled.div`
   margin-bottom: 8px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+  > input {
+    background-color: transparent;
+    color: grey;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-color: white;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    padding: 0px 2px;
+    outline: none;
+    width: 80%;
+  }
 
-  > form {
-    padding: 10px;
-    background-color: white;
+  > button {
+    padding: 8px;
+    width: 80px;
+    background-color: #861657;
+    color: white;
     border-radius: 5px;
-
-    > input {
-      background-color: transparent;
-      color: grey;
-      margin-left: 5px;
-      font-weight: bolder;
-      font-size: 18px;
-      border-color: white;
-      border-width: 0px;
-      border-bottom-width: 1px;
-      padding: 0px 2px;
-      outline: none;
-      width: 80%;
-    }
-
-    > button {
-      padding: 8px;
-      width: 80px;
-      background-color: #861657;
-      color: white;
-      border-radius: 5px;
-    }
   }
 `;
