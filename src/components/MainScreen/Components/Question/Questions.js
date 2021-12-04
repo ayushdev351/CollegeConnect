@@ -3,8 +3,11 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 import styled from "styled-components";
 
 import { db } from "../../../../firebase/index";
+import { useUserContext } from "../../../../context/userContext";
 
 function Questions() {
+  const { user } = useUserContext();
+
   const [newQuestion, setNewQuestion] = useState("");
   const [questions, setQuestions] = useState([]);
   const questionsCollectionRef = collection(db, "questions");
@@ -25,6 +28,11 @@ function Questions() {
   return (
     <QuestionScreen>
       <QuestionForm>
+        <UserName>
+          <i className="fas fa-user"></i>
+          <span>{user.displayName}</span>
+        </UserName>
+        <Break></Break>
         <input
           placeholder="Add your Question or Link here."
           onChange={(event) => {
@@ -33,10 +41,13 @@ function Questions() {
         />
         <button onClick={createQuestion}> Add Que </button>
       </QuestionForm>
-
-      {questions.map((question) => {
-        return <h1>{question.que}</h1>;
-      })}
+      <QuestionCard>
+        <div>
+          {questions.map((question) => {
+            return <p>Q: {question.que}</p>;
+          })}
+        </div>
+      </QuestionCard>
     </QuestionScreen>
   );
 }
@@ -59,6 +70,8 @@ const QuestionForm = styled.div`
   background-color: white;
   padding: 5px;
   border-radius: 8px;
+  margin-bottom: 20px;
+
   > input {
     background-color: transparent;
     color: grey;
@@ -68,16 +81,53 @@ const QuestionForm = styled.div`
     border-color: white;
     border-width: 0px;
     border-bottom-width: 1px;
-    padding: 0px 2px;
+    padding: 2px 3px;
     outline: none;
-    width: 80%;
+    width: 89%;
   }
 
   > button {
     padding: 8px;
     width: 80px;
     background-color: #861657;
+    background-image: linear-gradient(326deg, #861657 0%, #ec6f6f 74%);
     color: white;
+    font-weight: bold;
+    font-size: 12px;
     border-radius: 5px;
   }
+`;
+
+const QuestionCard = styled.div`
+  > div {
+    > p {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 9px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  }
+`;
+
+const UserName = styled.div`
+  padding-top: 2px;
+  > span {
+    padding-left: 3px;
+    font-size: 14px;
+  }
+`;
+
+const Break = styled.div`
+  background-color: #861657;
+  background-image: linear-gradient(326deg, #861657 0%, #ec6f6f 74%);
+  margin-top: 8px;
+  margin-bottom: 10px;
+  height: 3.5px;
+  margin-left: -5.5px;
+  margin-right: -5.5px;
+  border-radius: 5px;
 `;

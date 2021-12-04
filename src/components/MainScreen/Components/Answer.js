@@ -48,7 +48,7 @@ const Ans = styled.div`
 `;
 
 const AnsHead = styled.div`
-  padding: 5px;
+  padding: 1px;
   border-radius: 10px;
 `;
 const AnsQue = styled.div`
