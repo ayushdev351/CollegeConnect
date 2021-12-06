@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header.js";
 import LeftSide from "./LeftSide.js";
 import MainBody from "./Main.js";
+import RightSide from "./RightSide.js";
 
 import Spaces from "./Spaces.js";
 import Questions from "./Question/Questions.js";
@@ -22,6 +23,7 @@ function MainScreen(props) {
         <Route path="/spaces" component={Spaces} />
         <Route path="/notifications" component={Notifs} />
         <Route path="/profile" component={Profile} />
+        <RightSide />
       </Body>
     </Router>
   );

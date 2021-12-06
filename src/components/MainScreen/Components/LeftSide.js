@@ -57,6 +57,9 @@ function LeftSide() {
           <i className="fas fa-graduation-cap"></i>
           <p>College</p>
         </LsideMainContent>
+        <LsideAdd>
+          <p>Addvertisement</p>
+        </LsideAdd>
       </Lside>
     </Wrapper>
   );
@@ -78,7 +81,6 @@ const LsideHead = styled.div`
   margin-bottom: 20px;
   color: white;
   font-weight: bold;
-  opacity: 1;
   background-color: #6b0f1a;
   background-image: linear-gradient(74deg, #6b0f1a 0%, #b91372 74%);
   border-bottom-left-radius: 25px;
@@ -91,4 +93,23 @@ const LsideMainContent = styled.div`
   font-size: 14px;
   font-weight: bolder;
   opacity: 0.9;
+`;
+
+const LsideAdd = styled.div`
+  width: 150px;
+  height: 290px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #c4aead;
+  border-radius: 8px;
+
+  > p {
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
