@@ -13,7 +13,8 @@ function Header() {
     <Wrapper>
       <Navbar>
         <NavbarLeft>
-          <span>Quora</span>
+          <img src="https://i.ibb.co/vYWX7S8/logo1-modified.png" alt="G"></img>
+          <span>onnect</span>
         </NavbarLeft>
         <NavbarCenter>
           <LinkContainer to="/" exact>
@@ -73,6 +74,16 @@ const NavbarLeft = styled.div`
   font-weight: bolder;
   flex-shrink: 100;
   color: white;
+
+  > img {
+    width: 25px;
+    margin-bottom: -4px;
+  }
+
+  > span {
+    font-size: 22px;
+    font-family: cursive;
+  }
 `;
 
 const NavbarCenter = styled.div`
