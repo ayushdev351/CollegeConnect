@@ -1,19 +1,25 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import { collection, addDoc } from "firebase/firestore";
 
 import { useUserContext } from "../context/userContext";
+import { db } from "../firebase/index";
 
 const Signup = () => {
   const emailRef = useRef();
   const nameRef = useRef();
   const psdRef = useRef();
   const { registerUser } = useUserContext();
+  const usersCollectionRef = collection(db, "users");
 
   const onSubmit = (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
     const name = nameRef.current.value;
     const password = psdRef.current.value;
+
+    addDoc(usersCollectionRef, { Uname: name, Uemail: email });
+
     if (email && password && name) registerUser(email, password, name);
   };
 
