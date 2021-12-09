@@ -18,15 +18,18 @@ function Spaces() {
     getUsers();
   });
 
+  const color =
+    "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+
   return (
     <>
       <SpaceStyle>
-        <h1>Spaces</h1>
+        <h1>Our Users</h1>
         {users.map((user) => {
           return (
             <div>
-              <h1>Name: {user.name}</h1>
-              <h1>Age: {user.age}</h1>
+              <h3>Name: {user.Uname}</h3>
+              <p>Email: {user.Uemail}</p>
             </div>
           );
         })}
@@ -45,4 +48,37 @@ const SpaceStyle = styled.div`
   height: 90vh;
   padding: 15px;
   text-align: left;
+  overflow-y: scroll;
+
+  > h1 {
+    font-family: cursive;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 30%;
+    position: sticky;
+  }
+
+  > div {
+    background-color: white;
+    background-image: linear-gradient(326deg, #861657 0%, #ec6f6f 74%);
+    border-radius: 100px;
+    font-family: cursive;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-bottom: 20px;
+    width: 45%;
+
+    > h3 {
+      margin: 10px;
+    }
+
+    > p {
+      margin: 10px;
+      padding-bottom: 5px;
+    }
+  }
 `;
