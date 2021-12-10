@@ -4,8 +4,12 @@ import styled from "styled-components";
 function RightSide() {
   return (
     <Right>
-      <RightHead>Current Events</RightHead>
-      <RightContent></RightContent>
+      <RightHead>Current Events
+
+      </RightHead>
+      <RightContent>
+        <h1>Loop Audition</h1>
+      </RightContent>
     </Right>
   );
 }
@@ -37,4 +41,8 @@ const RightContent = styled.div`
   margin-right: 10px;
   background-color: #c4aead;
   border-radius: 8px;
+
+  > h1{
+    color: red;
+  }
 `;
