@@ -31,7 +31,7 @@ export const UserContextProvider = ({ children }) => {
       setError("");
       setLoading(false);
     });
-    return unsubscribe;
+    return unsubscribe;    
   }, []);
 
   const registerUser = (email, password, name) => {
@@ -42,7 +42,7 @@ export const UserContextProvider = ({ children }) => {
           displayName: name,
         })
       )
-      .then((res) => console.log(res))
+      // .then((res) => console.log(res))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   };

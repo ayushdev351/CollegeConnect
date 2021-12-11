@@ -1,6 +1,6 @@
 import Auth from "./components/auth";
 import Dashboard from "./components/dashboard";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useUserContext } from "./context/userContext";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
       {loading ? (
         <LoadingStyle>
-          <h2>Loading.....</h2>{" "}
+          <LoadingCircle />
         </LoadingStyle>
       ) : (
         <>{user ? <Dashboard /> : <Auth />}</>
@@ -23,11 +23,25 @@ function App() {
 
 export default App;
 
+const loadingAnimatiion = keyframes`
+   0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+const LoadingCircle = styled.div`
+  border: 10px solid black; /* Light grey */
+  border-top: 16px solid #b91372; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  animation-name: ${loadingAnimatiion};
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18%;
+`;
+
 const LoadingStyle = styled.div`
-  position: fixed;
-  font-weight: bold;
-  font-family: cursive;
-  font-size: 1.7rem;
-  top: 40%;
-  left: 44%;
+  margin-left: auto;
+  margin-right: auto;
 `;

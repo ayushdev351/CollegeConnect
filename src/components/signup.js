@@ -18,9 +18,9 @@ const Signup = () => {
     const name = nameRef.current.value;
     const password = psdRef.current.value;
 
-    addDoc(usersCollectionRef, { Uname: name, Uemail: email });
-
     if (email && password && name) registerUser(email, password, name);
+
+    addDoc(usersCollectionRef, { Uname: name, Uemail: email });
   };
 
   return (
