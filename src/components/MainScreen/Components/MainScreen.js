@@ -21,8 +21,8 @@ function MainScreen(props) {
         <Route path="/" component={MainBody} exact />
         <Route path="/questions" component={Questions} />
         <Route path="/spaces" component={Spaces} />
-        <Route path="/notifications" component={Notifs} />
         <Route path="/profile" component={Profile} />
+        {<Route path="/notifications" component={Notifs} />}
         <RightSide />
       </Body>
     </Router>
