@@ -17,7 +17,7 @@ function Questions() {
   var day = dateObj.getUTCDate();
   var year = dateObj.getUTCFullYear();
 
-  const date = day + "-" + month + "-" + year;
+  const date = day + "/" + month + "/" + year;
 
   const createQuestion = async () => {
     await addDoc(questionsCollectionRef, {
@@ -55,7 +55,14 @@ function Questions() {
       <QuestionCard>
         <div>
           {questions.map((question) => {
-            return <p>Q: {question.que}</p>;
+            return (
+              <>
+                <p>Q: {question.que}</p>
+                <button>Add Ans</button>
+                <span>{question.addedBy}</span>
+                <span>{question.addedOn}</span>
+              </>
+            );
           })}
         </div>
       </QuestionCard>
@@ -118,8 +125,21 @@ const QuestionCard = styled.div`
       font-size: 15px;
       font-weight: bold;
       padding: 9px;
-      margin-bottom: 10px;
-      border-radius: 5px;
+      margin-bottom: 0px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    > button {
+      margin-bottom: 15px;
+      padding: 4px;
+      width: 80px;
+      background-color: #861657;
+      background-image: linear-gradient(326deg, #861657 0%, #ec6f6f 74%);
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
     }
   }
 `;
