@@ -12,8 +12,19 @@ function Questions() {
   const [questions, setQuestions] = useState([]);
   const questionsCollectionRef = collection(db, "questions");
 
+  var dateObj = new Date();
+  var month = dateObj.getUTCMonth() + 1;
+  var day = dateObj.getUTCDate();
+  var year = dateObj.getUTCFullYear();
+
+  const date = day + "-" + month + "-" + year;
+
   const createQuestion = async () => {
-    await addDoc(questionsCollectionRef, { que: newQuestion });
+    await addDoc(questionsCollectionRef, {
+      que: newQuestion,
+      addedBy: user.displayName,
+      addedOn: date
+    });
   };
 
   useEffect(() => {
