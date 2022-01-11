@@ -62,12 +62,10 @@ const Navbar = styled.div`
   background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
 
   color: white;
-  /* :active{
-    color: black;
-  } */
   font-size: 1.1rem;
   padding: 10px;
   position: fixed;
+  height: 33.45px;
   width: 100vw;
   z-index: 1000;
 `;
@@ -125,10 +123,12 @@ const Button = styled.div`
   color: black;
   background-color: white;
   border-radius: 8px;
+  margin-left: auto;
   padding: 5px;
   width: 40%;
   :hover {
     cursor: pointer;
-    color: grey;
+    background-color: black;
+    color: white;
   }
 `;

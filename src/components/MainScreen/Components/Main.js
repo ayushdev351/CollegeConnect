@@ -70,7 +70,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #d8d8d8;
-  height: 90vh;
+  height: 96%;
   padding: 15px;
   text-align: left;
   overflow-y: scroll;
