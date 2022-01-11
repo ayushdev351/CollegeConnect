@@ -5,7 +5,29 @@ function RightSide() {
   return (
     <Right>
       <RightHead>Current Events</RightHead>
-      <RightContent></RightContent>
+
+      <RightContent>
+        <h4 style={{ marginTop: "5px" }}>
+          <a href="https://galgotiacollege.edu/">
+            7 B Tech programs now accredited by NBA till 2023-24
+          </a>
+        </h4>
+        <h4>
+          <a href="https://galgotiacollege.edu/assets/pdfs/Brochure-SBP-2022.pdf">
+            International Conference SBP-22
+          </a>
+        </h4>
+        <h4>
+          <a href="https://galgotiacollege.edu/">
+            Classes to be taken Online till 15/01/22
+          </a>
+        </h4>
+        <h4>
+          <a href="https://galgotiacollege.edu/assets/pdfs/Brochur-SBP-2022.pdf">
+            'Sustainable Business Practices-22 on 27th and 28th January 2022
+          </a>
+        </h4>
+      </RightContent>
     </Right>
   );
 }
@@ -37,4 +59,11 @@ const RightContent = styled.div`
   margin-right: 10px;
   background-color: #c4aead;
   border-radius: 8px;
+
+  > h4 {
+    padding: 5px;
+    margin: 12px 10px;
+    background-color: white;
+    border-radius: 5px;
+  }
 `;

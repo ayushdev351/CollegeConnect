@@ -9,7 +9,7 @@ import RightSide from "./RightSide.js";
 
 import Spaces from "./Spaces.js";
 import Questions from "./Question/Questions.js";
-import Notifs from "./Notifications.js";
+import Admin from "./Admin.js";
 import Profile from "./Profile.js";
 
 function MainScreen(props) {
@@ -22,7 +22,7 @@ function MainScreen(props) {
         <Route path="/questions" component={Questions} />
         <Route path="/spaces" component={Spaces} />
         <Route path="/profile" component={Profile} />
-        {<Route path="/notifications" component={Notifs} />}
+        <Route path="/admin" component={Admin} />
         <RightSide />
       </Body>
     </Router>

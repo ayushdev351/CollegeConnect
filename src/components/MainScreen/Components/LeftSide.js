@@ -59,6 +59,10 @@ function LeftSide() {
         </LsideMainContent>
         <LsideAdd>
           <p>Addvertisement</p>
+          <img
+            src="https://res.cloudinary.com/css-tricks/image/upload/w_600,q_auto,f_auto/buysellads/uu/7/87530/1618003998-MC_CSSTricks_Logo_600x600-3.png"
+            alt="Addvertisement"
+          ></img>
         </LsideAdd>
       </Lside>
     </Wrapper>
@@ -111,5 +115,11 @@ const LsideAdd = styled.div`
     color: white;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  > img {
+    margin-top: 20px;
+    width: 150px;
+    height: 200px;
   }
 `;

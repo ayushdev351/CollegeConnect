@@ -5,7 +5,7 @@ function Notifs() {
   return (
     <>
       <NotiStyle>
-        <h1>Notifications</h1>
+        <h1>Welcome Admin</h1>
       </NotiStyle>
     </>
   );

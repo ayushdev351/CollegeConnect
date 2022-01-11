@@ -58,7 +58,11 @@ function Questions() {
             return (
               <>
                 <p>Q: {question.que}</p>
-                <button>Add Ans</button>
+                {user.email === "ayushkvchamp@gmail.com" ? (
+                  <button>Add Ans</button>
+                ) : (
+                  <></>
+                )}
                 <span>{question.addedBy}</span>
                 <span>{question.addedOn}</span>
               </>
@@ -125,13 +129,15 @@ const QuestionCard = styled.div`
       font-size: 15px;
       font-weight: bold;
       padding: 9px;
-      margin-bottom: 0px;
+      margin-top: 15px;
+      margin-bottom: 1px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
 
     > button {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       padding: 4px;
       width: 80px;
       background-color: #861657;
@@ -139,7 +145,24 @@ const QuestionCard = styled.div`
       color: white;
       font-weight: bold;
       font-size: 12px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin-right: 20px;
       cursor: pointer;
+    }
+
+    > span {
+      color: white;
+      font-weight: bold;
+      width: 80px;
+      font-size: 12px;
+      background-color: #861657;
+      background-image: linear-gradient(326deg, #861657 0%, #ec6f6f 74%);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      cursor: pointer;
+      padding: 4px;
+      margin-right: 20px;
     }
   }
 `;

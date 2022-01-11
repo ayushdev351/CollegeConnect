@@ -7,7 +7,7 @@ import Wrapper from "./Helpers/Wrapper.js";
 import { useUserContext } from "../../../context/userContext";
 
 function Header() {
-  const { logoutUser } = useUserContext();
+  const { user, logoutUser } = useUserContext();
 
   return (
     <Wrapper>
@@ -26,9 +26,14 @@ function Header() {
           <LinkContainer to="/spaces">
             <i className="fas fa-users"></i>
           </LinkContainer>
-          <LinkContainer to="/notifications">
-            <i className="fas fa-bell"></i>
-          </LinkContainer>
+
+          {user.email === "ayushkvchamp@gmail.com" ? (
+            <LinkContainer to="/admin">
+              <i className="fas fa-user-shield"></i>
+            </LinkContainer>
+          ) : (
+            <></>
+          )}
 
           <NavbarSearch class="NavbarSearch">
             <i className="fas fa-search search"></i>
