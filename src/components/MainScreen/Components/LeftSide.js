@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Wrapper from "./Helpers/Wrapper.js";
+import { LinkContainer } from "react-router-bootstrap";
 
 function LeftSide() {
   return (
@@ -18,20 +19,24 @@ function LeftSide() {
             Spaces Tags
           </p>
         </LsideHead>
-        <LsideMainContent>
-          <i className="fas fa-school"></i>
-          <p>Studying</p>
-        </LsideMainContent>
+        <LinkContainer to="/studying">
+          <LsideMainContent>
+            <i className="fas fa-school"></i>
+            <p>Studying</p>
+          </LsideMainContent>
+        </LinkContainer>
         <br />
         <LsideMainContent>
           <i className="fas fa-user-astronaut"></i>
           <p>Astrophysics</p>
         </LsideMainContent>
         <br />
-        <LsideMainContent>
-          <i className="fas fa-paste"></i>
-          <p>Exams</p>
-        </LsideMainContent>
+        <LinkContainer to="/exams">
+          <LsideMainContent>
+            <i className="fas fa-paste"></i>
+            <p>Exams</p>
+          </LsideMainContent>
+        </LinkContainer>
         <br />
         <LsideMainContent>
           <i className="fas fa-flag"></i>

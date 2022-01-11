@@ -12,6 +12,9 @@ import Questions from "./Question/Questions.js";
 import Admin from "./Admin.js";
 import Profile from "./Profile.js";
 
+import Studying from "./Studying.js";
+import Exams from "./Exams.js";
+
 function MainScreen(props) {
   return (
     <Router>
@@ -23,6 +26,8 @@ function MainScreen(props) {
         <Route path="/spaces" component={Spaces} />
         <Route path="/profile" component={Profile} />
         <Route path="/admin" component={Admin} />
+        <Route path="/studying" component={Studying} />
+        <Route path="/exams" component={Exams} />
         <RightSide />
       </Body>
     </Router>
