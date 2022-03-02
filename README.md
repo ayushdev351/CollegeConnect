@@ -1,77 +1,34 @@
-## College Connect Website for Students with Firebase and React
+## College Connect Website for Students
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5d74b0ed-c3b9-4c77-8229-a54f6eb4b0f7/deploy-status)](https://app.netlify.com/sites/nervous-swirles-ee977f/deploys)
 
 Website : [Galgotia Connect][1]
 
 [1]: http://galgotiaconnect.social  "Galgotia Connect"
 
-# Getting Started with Create React App
+Technology Used : HTML, CSS, Java Script, React JS, Google Firebase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Students of colleges face problems regarding college information, queries related to college, syllabus and many more problems. 
+So, I am proposing a website where students can ask questions and queries related to college and connect with people who contribute unique insights and quality answer.
+Latest information related to the day to day college affairs is also provided in the website.
 
-## Available Scripts
+Website Screenshots : 
 
-In the project directory, you can run:
+Home Page : Here all the previous answer post are shown in Card Form.
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/79743704/156329767-f0cfa333-4389-42d6-96ae-b7ea07e7a491.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login Page : Here the students already registered can log into there accounts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/79743704/156329625-d8b1548d-f69c-4009-9e37-37aac40a98b9.png)
 
-### `npm test`
+Registration Page : Here new Students can Register themselves to the website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/79743704/156329691-320b496a-cc3a-486a-a0b0-63b22e832e5a.png)
 
-### `npm run build`
+Ask Questions : Here a student can ask any of his queries and post it so that other can answer that question
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/79743704/156329836-88421390-873c-4ba8-b399-4c2ad2354416.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Profile Page :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://user-images.githubusercontent.com/79743704/156329874-5f508170-5ebe-4852-83a0-dbcf03119b45.png)
